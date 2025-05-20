@@ -26,6 +26,7 @@ class MyServer(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"<h1>Error: 404 - Page Not Found</h1>")
 
+
     def do_POST(self):
         """Метод для обработки POST-запросов"""
         content_length = int(self.headers['Content-Length'])
